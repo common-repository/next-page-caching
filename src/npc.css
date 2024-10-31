@@ -1,0 +1,45 @@
+.npc_title {
+	margin: 2em 0 0.5em 0;
+}
+
+#npc_next_url_area {
+	display: flex;
+	align-items: center;
+	justify-items: stretch;
+}
+#npc_next_url {
+	flex-grow: 1;
+}
+#npc_next_url_button {
+	margin: 0 10px;
+}
+
+#npc_critical_urls_button {
+	margin: 10px 0;
+}
+#npc_critical_urls {
+	height: 200px;
+	width: 100%;
+	position: relative;
+}
+#npc_critical_urls[disabled] option {
+	opacity: .1;
+}
+#npc_critical_urls[disabled]:before {
+	font-family: 'Dashicons';
+	content: "\f531";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 2em;
+	opacity: .5;
+	margin-left: -.5em;
+	margin-top: -.5em;
+	-webkit-animation: npc-spin 2s linear infinite;
+    -moz-animation: npc-spin 2s linear infinite;
+    animation: npc-spin 2s linear infinite;
+}
+
+@-moz-keyframes npc-spin { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes npc-spin { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes npc-spin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
